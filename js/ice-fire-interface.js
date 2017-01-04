@@ -25,6 +25,12 @@ $(document).ready(function() {
     var houseNameTag = $(this).parent().attr('id');
     var newHouse = new House(houseId, houseNameTag);
     newHouse.getInfo(displayHouseInfo);
+    $('#house-box').hide();
   });
+
+  $('#house-button').click(function(){
+    $('#house-box').toggle();
+    $('#showResult').empty();
+  })
 
 });
