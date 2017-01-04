@@ -1,5 +1,6 @@
-function House(newId) {
+function House(newId, newName) {
   this.id = newId;
+  this.nameTag = newName;
   this.info = null;
 }
 
@@ -8,7 +9,7 @@ House.prototype.getInfo = function(displayFunction) {
   $.get('http://www.anapioficeandfire.com/api/houses/' + that.id).then(
     function(response){
       that.info = response;
-      displayFunction(that.info);
+      displayFunction(that);
     });
   };
 
