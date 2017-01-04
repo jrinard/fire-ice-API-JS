@@ -1,4 +1,15 @@
-GotArchive.getHouseInfo = function(houseId) {
-  var houseInfo = $.get('http://http://www.anapioficeandfire.com/api/houses/' + houseId);
-  return houseInfo;
-};
+function House(newId) {
+  this.id = newId;
+  this.info = null;
+}
+
+House.prototype.getInfo = function(displayFunction) {
+  var that = this;
+  $.get('http://www.anapioficeandfire.com/api/houses/' + that.id).then(
+    function(response){
+      that.info = response;
+      displayFunction(that.info);
+    });
+  };
+
+exports.houseModule = House;
