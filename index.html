@@ -9,26 +9,24 @@
   </head>
   <body>
     <div class="container">
-      <div id="top">
+      <div id="top" class="text-center">
           <h1>SONG OF ICE AND FIRE</h1>
       </div>
       <div class="btn btn-success" id="house-button">
       HOUSES
       </div>
 
-      <div id="search">
-            <div class="input-group">
+      <div id="search" class="pull-right">
+        <div class="input-group">
+          <input id="search-text" type="text" class="form-control" aria-label="..." placeholder="Search by name">
           <div class="input-group-btn">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category <span class="caret"></span></button>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li><a class="search-link" id="houses">Houses</a></li>
+              <li><a class="search-link" id="characters">Characters</a></li>
+              <li><a class="search-link" id="books">Books</a></li>
             </ul>
           </div><!-- /btn-group -->
-          <input type="text" class="form-control" aria-label="...">
         </div><!-- /input-group -->
       </div>
 
