@@ -1,7 +1,7 @@
 
 //run in terminal with node deleter.js
 
-var booksJson = require("./../json/books.json");//source file
+var booksJson = require("./../json_data/books.json");//source file
 var fs = require('fs');
 
 var cleanUp = function(books) {
@@ -19,4 +19,4 @@ var cleanUp = function(books) {
 
 var booksClean = cleanUp(booksJson);
 
-fs.writeFile("./../json/booksClean.json", JSON.stringify(booksClean)); //final file name
+fs.writeFile("./../json_data/booksClean.json", JSON.stringify(booksClean)); //final file name
