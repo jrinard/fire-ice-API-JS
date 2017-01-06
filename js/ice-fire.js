@@ -63,6 +63,7 @@ function Searcher(category, searchValue) {
 }
 
 Searcher.prototype.search = function() {
+  debugger
   var that = this;
   if (that.category === 'books') {
     for (var i=0; i < books.length; i++) {
@@ -81,9 +82,12 @@ Searcher.prototype.search = function() {
       if (characters[k].Name.toLowerCase().includes(that.searchValue)) {
         that.infoList.push(characters[k]);
       } else {
-        for(var alias in characters[k].Aliases) {
-          if (alias.toLowerCase().includes(that.searchValue)) {
-            that.infoList.push(characters[k]);
+        for(var l=0; l < characters[k].Aliases.length; l++) {
+          var alias = characters[k].Aliases[l];
+          if(alias != undefined){
+            if (alias.toLowerCase().includes(that.searchValue)) {
+              that.infoList.push(characters[k]);
+            }
           }
         }
       }
