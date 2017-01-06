@@ -103,10 +103,15 @@ $(document).ready(function() {
     $('#house-box').hide();
     var searchCategory = $(this).attr('id');
     var searchText = $('#search-text').val();
-    var newSearcher = new Searcher(searchCategory,searchText);
-    newSearcher.search();
-    $('#search-text').val("");
-    $('#showResult').empty().show();
-    displaySearchInfo(newSearcher);
+    if (searchText != "") {
+      var newSearcher = new Searcher(searchCategory,searchText);
+      newSearcher.search();
+      $('#search-text').val("");
+      $('#showResult').empty().show();
+      displaySearchInfo(newSearcher);
+    } else {
+      $('#showResult').empty().show();
+      $('#showResult').html("<h3>Please enter a name.</h3>")
+    }
   });
 });
