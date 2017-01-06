@@ -5,7 +5,7 @@ var Searcher = require('./../js/ice-fire.js').searcherModule;
 
 var displayHouseInfo = function(houseObject) {
   var houseInfo = houseObject.info;
-  var validImages = ["stark", "arryn", "baratheon", "bracken", "clegane", "greyjoy", "lannister", "mallister", "martell", "mormont", "targaryen", "tully", "tyrell"];
+  var validImages = ["stark", "arryn", "baratheon", "clegane", "greyjoy", "lannister", "mallister", "martell", "targaryen", "tully", "tyrell"];
   var houseImage;
   if(validImages.includes(houseObject.nameTag)) {
     houseImage = "./img/" + houseObject.nameTag + ".jpg";
